@@ -17,28 +17,46 @@ n = int(input())
 #for i in range(0,n):
 #    integer.append(input())
 
-
 while(1):
-    refval = n
-    myval = refval%2
-    myval1 = n/2
-    if refval < 2:
-        break
+    myval = int(n%2)
     integer.append(myval)
-    refval = myval1
-    
+    print(myval)
+    myval1 = int(n/2)
+    print(myval1)
+    n = myval1
+    print("myrefval:",n)
+    if myval1 < 2:
+        integer.append(myval1)
+        break
+
+print("integer is:",integer)
+integer2 = list()
+print("")
+print("")
+for i in range(0,len(integer),1):
+    print(i)
+    if integer == None:
+        break
+    value = integer.pop(-1)
+    print("value is",value)
+    integer2.insert(1,value)
+    print("integer2 is:",integer2)
+#------popping the list to rotate the values-----
+
+
 print(integer)
+print(integer2)
 value = 0
 print("")
 print("")
-for i,k in enumerate(integer):
+for i,k in enumerate(integer2):
     ref = int(k)
     if ref == 0:
         value = value+0
     elif ref == 1:
-        value = value + 10**((len(integer)-1)-i)
+        value = value + 10**((len(integer2)-1)-i)
     else:
         print("invalid data")
-    print(10**((len(integer)-1)-i))
+    print(10**((len(integer2)-1)-i))
 
-print(value)
+print("myvalue is :",value)
