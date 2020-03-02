@@ -37,9 +37,9 @@ for i in range(0,len(integer),1):
     print(i)
     if integer == None:
         break
-    value = integer.pop(-1)
+    value = integer.pop(len(integer)-1)
     print("value is",value)
-    integer2.insert(1,value)
+    integer2.append(value)
     print("integer2 is:",integer2)
 #------popping the list to rotate the values-----
 
